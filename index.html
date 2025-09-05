@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy Tính JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1 class="title">🧮 Máy Tính</h1>
+        <input type="text" class="display" id="display" placeholder="0" readonly>
+        
+        <div class="buttons">
+            <button class="btn-clear" onclick="clearAll()">AC</button>
+            <button class="btn-function" onclick="clearLast()">⌫</button>
+            <button class="btn-operator" onclick="appendToDisplay('/')" title="Chia">÷</button>
+            <button class="btn-operator" onclick="appendToDisplay('*')" title="Nhân">×</button>
+            
+            <button class="btn-number" onclick="appendToDisplay('7')">7</button>
+            <button class="btn-number" onclick="appendToDisplay('8')">8</button>
+            <button class="btn-number" onclick="appendToDisplay('9')">9</button>
+            <button class="btn-operator" onclick="appendToDisplay('-')" title="Trừ">-</button>
+            
+            <button class="btn-number" onclick="appendToDisplay('4')">4</button>
+            <button class="btn-number" onclick="appendToDisplay('5')">5</button>
+            <button class="btn-number" onclick="appendToDisplay('6')">6</button>
+            <button class="btn-operator" onclick="appendToDisplay('+')" title="Cộng">+</button>
+            
+            <button class="btn-number" onclick="appendToDisplay('1')">1</button>
+            <button class="btn-number" onclick="appendToDisplay('2')">2</button>
+            <button class="btn-number" onclick="appendToDisplay('3')">3</button>
+            <button class="btn-function" onclick="calculatePercentage()" title="Phần trăm">%</button>
+            
+            <button class="btn-number" onclick="appendToDisplay('0')">0</button>
+            <button class="btn-function" onclick="appendToDisplay('.')" title="Dấu phẩy">.</button>
+            <button class="btn-equals" onclick="calculate()">=</button>
+        </div>
+
+        <div class="history">
+            <div class="history-title">📝 Lịch sử tính toán</div>
+            <div id="historyList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
